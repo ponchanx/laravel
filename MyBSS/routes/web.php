@@ -27,5 +27,5 @@ Route::get('/', [PostController::class, 'index'])
 // Route::get('/posts/1', [PostController::class, 'index']);
 // Route::get('/posts/2', [PostController::class, 'index']);
 // データが増えてきて大変なのでまとめて書く。
-Route::get('/posts/{id}', [PostController::class, 'show'])
+Route::get('/posts/{post}', [PostController::class, 'show'])
     ->name('posts.show');

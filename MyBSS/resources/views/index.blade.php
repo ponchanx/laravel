@@ -19,10 +19,10 @@
             @endforeach --}}
 
             {{--データが空だった場合の処理。@forelseを使う--}}
-            @forelse ($posts as $index => $post) {{--中身がある場合--}}
+            @forelse ($posts as $post) {{--中身がある場合--}}
                 <li>
-                    <a href="{{ route('posts.show', $index) }}">
-                        {{ $post }}
+                    <a href="{{ route('posts.show', $post) }}">
+                        {{ $post->title }}
                     </a>
                 </li>
             @empty
